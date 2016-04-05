@@ -92,10 +92,8 @@ RSpec.configure do |config|
 end
 
 def create_new_user
-  before(:each) do
-    visit new_user_url
-    fill_in 'Username', :with => "testing_username"
-    fill_in 'Password', :with => "biscuits"
-    click_on "Sign Up"
-  end
+  visit new_user_url
+  fill_in 'Username', :with => "testing_username"
+  fill_in 'Password', :with => "biscuits"
+  click_on "Sign Up"
 end
