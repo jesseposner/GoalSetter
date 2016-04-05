@@ -1,0 +1,20 @@
+<h3> <%= current_user.username %>'s goals </h3>
+
+<% @user_goals.each do |goal| %>
+  <font size=4><%= goal.title %></font><br>
+  <font size=2><%= goal.description %></font><br>
+<% end %>
+
+<br>
+<br>
+<h4>public goals:</h4>
+
+<% @public_goals.each do |goal| %>
+  <font size=4><%= goal.title %></font><br>
+  <font size=3><%= goal.user.username %></font><br>
+  <font size=2><%= goal.description %></font><br>
+<% end %>
+
+<br>
+<br>
+<%= link_to "New Goal", new_goal_url %>
